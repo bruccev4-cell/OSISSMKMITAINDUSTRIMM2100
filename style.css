@@ -1,0 +1,478 @@
+
+/* =========================
+   1. PENGATURAN DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #102a43;
+    --secondary: #1d72d8;
+    --accent: #55c2ff;
+    --background: #f5f8fc;
+    --white: #ffffff;
+    --text: #243b53;
+    --muted: #627d98;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* =========================
+   2. NAVIGASI
+========================= */
+
+header {
+    background: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px #00000015;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: var(--white);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent);
+}
+
+/* =========================
+   3. BERANDA / HERO
+========================= */
+
+.hero {
+    min-height: 540px;
+    padding: 100px 24px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #55c2ff35,
+            transparent 30%
+        ),
+        linear-gradient(135deg, #102a43, #174f82);
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+
+.subtitle {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 62px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-content > p:not(.subtitle) {
+    max-width: 570px;
+    color: #e0efff;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   4. TOMBOL
+========================= */
+
+.btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #155bb0;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   5. BAGIAN KONTEN
+========================= */
+
+.section {
+    padding: 75px 24px;
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+
+.section-light {
+    background: var(--background);
+}
+
+.section h2 {
+    color: var(--primary);
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 12px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 38px;
+    color: var(--muted);
+}
+
+/* =========================
+   6. KARTU PROFIL & BERITA
+========================= */
+
+.card-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    text-align: left;
+}
+
+.card {
+    background: var(--white);
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #e3ebf3;
+    box-shadow: 0 8px 25px #102a430a;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px #102a4315;
+}
+
+.card h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e5f3ff;
+    color: var(--secondary);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   7. FORM ASPIRASI & LOGIN
+========================= */
+
+.form-box {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid #e3ebf3;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px #102a430a;
+    text-align: left;
+}
+
+.form-box label {
+    display: block;
+    margin: 16px 0 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    outline: none;
+    background: var(--white);
+    color: var(--text);
+}
+
+.form-box input:focus,
+.form-box select:focus,
+.form-box textarea:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px #1d72d820;
+}
+
+.form-box textarea {
+    resize: vertical;
+}
+
+.form-box button {
+    width: 100%;
+    margin-top: 22px;
+}
+
+#pesanStatus,
+#loginStatus {
+    margin-top: 15px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   8. DAFTAR ASPIRASI
+========================= */
+
+#daftarAspirasi {
+    max-width: 600px;
+    margin: 25px auto 0;
+    text-align: left;
+}
+
+.aspirasi-item {
+    background: var(--background);
+    border-left: 4px solid var(--secondary);
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.aspirasi-item h3 {
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.aspirasi-item p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* =========================
+   9. FOOTER
+========================= */
+
+footer {
+    background: #0b1f33;
+    color: #d9e6f2;
+    padding: 25px 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* =========================
+   10. TAMPILAN HP
+========================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 14px 16px;
+        gap: 10px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 75px 22px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .section {
+        padding: 55px 18px;
+    }
+
+    .form-box {
+        padding: 22px;
+    }
+}
+
+
+/* SLIDE INFORMASI OSIS */
+.info-slider {
+    position: relative;
+    max-width: 1100px;
+    min-height: 260px;
+    margin: 30px auto;
+    padding: 45px 65px 65px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #102a43, #1769aa);
+    color: white;
+    box-sizing: border-box;
+}
+
+.info-slide {
+    display: none;
+    animation: infoMuncul 0.5s ease;
+}
+
+.info-slide.active {
+    display: block;
+}
+
+.info-label {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #dbeafe;
+    color: #12345a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.info-slide h2 {
+    margin: 18px 0 10px;
+    font-size: 30px;
+}
+
+.info-slide p {
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+.info-btn {
+    position: absolute;
+    top: 45%;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: white;
+    color: #102a43;
+    cursor: pointer;
+}
+
+.info-btn.prev {
+    left: 15px;
+}
+
+.info-btn.next {
+    right: 15px;
+}
+
+.info-dots {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-dot {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: #a9c5df;
+    cursor: pointer;
+}
+
+.info-dot.active {
+    background: white;
+    transform: scale(1.25);
+}
+
+@keyframes infoMuncul {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .info-slider {
+        margin: 20px 12px;
+        padding: 35px 45px 60px;
+        min-height: 280px;
+    }
+
+    .info-slide h2 {
+        font-size: 24px;
+    }
+}
+
+
+<link rel="stylesheet" href="style.css">
