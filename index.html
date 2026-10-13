@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OSIS | Aspirasi Siswa</title>
+
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGASI -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">OSIS<span>.</span></div>
+
+            <ul class="nav-menu">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#berita">Berita</a></li>
+                <li><a href="#aspirasi">Aspirasi</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BERANDA -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <p class="subtitle">OSIS SMK MITRA INDUSTRI MM2100</p>
+
+            <h1>Suara Siswa,<br>
+                Masa Depan Sekolah.</h1>
+
+            <p>
+                Bersama OSIS, wujudkan lingkungan sekolah
+                yang aktif, inovatif, dan penuh semangat.
+            </p>
+
+            <a href="#aspirasi" class="btn">
+                Sampaikan Aspirasi
+            </a>
+        </div>
+    </section>
+
+    <!-- PROFIL OSIS -->
+
+<img src="images./kegiatan1.jpg" alt="Foto Kegiatan OSIS">
+
+    <section id="profil" class="section">
+        <h1>VISI OSIS</h1>
+
+        <p style="margin-bottom: 10px; text-align: center;">
+           <h5>Menjadikan OSIS SMK Mitra Industri sebagai wadah pengembangan 
+          kreatifitas, inovasi dan kolaborasi yang mendorong potensi serta prestasi siswa, 
+          sekaligus menjadi penggerak utama dalam kemajuan sekolah.
+         <p style="margin-bottom: 30px; text-align: center;">
+
+      
+              <h1>MISI OSIS</h1>
+                <p>
+                  <div class="card">
+              
+                  <h5></h5> Menjalin Kerja sama dengan pihak sekolah, esktrakurikuler,
+                  dan komunitas luar guna memperluas kesempatan siswa dalam berkarya dan berkembang.
+                <p> </div><h
+            </>
+
+            <div class="card">
+          
+                    Mengembangkan potensi siswa, meningkatkan
+                    kepedulian lingkungan, dan membangun
+                    komunikasi yang baik.
+                </>
+            </div>
+
+            <div class="card">
+                
+                    Menjadi wadah aspirasi dan kreativitas
+                    siswa untuk menciptakan sekolah yang positif.
+                
+            </div>
+        </>
+    </section>
+
+    <!-- BERITA DAN KEGIATAN -->
+    <section id="berita" class="section section-light">
+        <h2>Berita & Kegiatan</h2>
+
+        <p class="section-description">
+            Informasi terbaru mengenai kegiatan dan program OSIS.
+        </p>
+
+        <div class="card-container">
+            <div class="card news-card">
+                <span class="tag">Kegiatan</span>
+                <h2>Program Kebersihan Sekolah</h2>
+                <p>
+                    Mengajak seluruh siswa menjaga kebersihan
+                    dan kenyamanan lingkungan sekolah.
+                </p>
+            </div>
+
+            <div class="card news-card">
+                <span class="tag">Informasi</span>
+                <h2>Forum Aspirasi Siswa</h2>
+                <p>
+                    Wadah bagi siswa untuk menyampaikan ide,
+                    kritik, dan saran secara konstruktif.
+                </p>
+            </div>
+
+            <div class="card news-card">
+                <span class="tag">Pengembangan</span>
+                <h2>Pengembangan Bakat</h2>
+                <p>
+                    Mendukung siswa untuk berkarya,
+                    berkolaborasi, dan mengembangkan potensi.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM ASPIRASI -->
+    <section id="aspirasi" class="section">
+        <h2>Suara Aspirasi Siswa</h2>
+
+        <p class="section-description">
+            Punya ide atau saran untuk sekolah?
+            Sampaikan melalui formulir berikut.
+        </p>
+
+        <form id="formAspirasi" class="form-box">
+            <label for="nama">Nama siswa</label>
+            <input
+                type="text"
+                id="nama"
+                placeholder="Masukkan nama kamu"
+                required
+            >
+
+            <label for="kelas">Kelas</label>
+            <input
+                type="text"
+                id="kelas"
+                placeholder="Contoh: XI TITL 2"
+                required
+            >
+
+            <label for="kategori">Kategori aspirasi</label>
+            <select id="kategori" required>
+                <option value="">Pilih kategori</option>
+                <option value="Fasilitas">Fasilitas sekolah</option>
+                <option value="Kebersihan">Kebersihan</option>
+                <option value="Pembelajaran">Pembelajaran</option>
+                <option value="Kegiatan">Kegiatan siswa</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+
+            <label for="pesan">Isi aspirasi</label>
+            <textarea
+                id="pesan"
+                rows="5"
+                placeholder="Tuliskan ide, kritik, atau saran..."
+                required
+            ></textarea>
+
+            <button type="submit" class="btn">
+                Kirim Aspirasi
+            </button>
+
+            <p id="pesanStatus" aria-live="polite"></p>
+        </form>
+
+        <div id="daftarAspirasi"></div>
+    </section>
+
+    <!-- LOGIN DEMO -->
+    <section id="login" class="section section-light">
+        <h2>Login Pengurus</h2>
+
+        <p class="section-description">
+            Area login untuk pengurus OSIS.
+        </p>
+
+        <form id="formLogin" class="form-box">
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Masukkan username"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Masukkan password"
+                required
+            >
+
+            <button type="submit" class="btn">
+                Login
+            </button>
+
+            <p id="loginStatus" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 OSIS Sekolah. Bersama Membangun Sekolah.</p>
+    </footer>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+
+</body><link rel="stylesheet" href="style.css">
+</html>
+
+<script src="script.js"></script>
